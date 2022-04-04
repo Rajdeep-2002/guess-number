@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@900&family=Bebas+Neue&family=Dancing+Script&family=Open+Sans:wght@300&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+        *,*::before,*::after{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            max-width: 100vw;
+            min-height: 100vh;
+            background: linear-gradient(246.26deg, #585DFE 0%, #FB3796 100%);
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* display: grid;
+            place-items: center; */
+        }
+        .box1{
+            width: 90%;
+            max-width: 800px;
+            background-color: aliceblue;
+            padding: 30px 40px;
+        }
+        .p1{
+            font-weight: bolder;
+            font-size: xx-large;
+            margin-left: 15px;
+            color: rgb(37, 29, 14);
+            text-align: center;
+        }
+        form{
+            display:flex;
+            justify-content: center;
+            
+        }
+        input{
+            width: 200px;
+            margin: 20px 0;
+        }
+        label{
+            font-size: 40px;
+        }
+        button{
+           /* margin-top: 50px;*/
+            height: 50px;
+            width: 200px;
+            background-color: #9f29b7;
+            /* position: absolute;
+            margin-left: 300px; */
+            font-weight: bolder;
+            font-size: xx-large;
+            color: aliceblue;
+        }
+        #tryagain{
+            background-color: #585DFE;
+        }
+        .para{
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        #comments{
+            font-weight: bolder;
+            font-size: xx-large;
+            text-align: center;
+            /* margin:10px 0px; */
+            margin-block: 10px;
+        }
+        .disp{
+            font-weight: bolder;
+            font-size: large;
+            color: rgb(59 53 53)
+        }
+        /* #guessed{
+            font-weight: bolder;
+            font-size: large;
+            color: rgb(59 53 53)
+        }
+        #prev{
+            font-weight: bolder;
+            font-size: large;
+            color: rgb(59 53 53);
+        } */
+        .num{
+            font-weight: bolder;
+            font-size: xx-large;
+        }
+        .box-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p class="p1">
+            I am thinking of a number between 1 and 20.<br>Can you guess it?
+        </p>
+         <form>
+            <input type="number" class="num" name="num" id="inp1">
+        </form>
+        <div class="box-container">
+            <button id="submit" onclick="input()">SUBMIT</button>
+            <button id="tryagain" onclick="tr()">RESET GAME</button>
+        </div>
+        <p id="comments"></p>
+        <p class="para">Your guesses: <span class="disp" id="guessed"></span></p>
+        <p class="para">Guesses left: <span class="disp" id="left"></span></p>
+        <p class="para">Previously guessed number: <span class="disp" id="prev"><span>
+        </p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
