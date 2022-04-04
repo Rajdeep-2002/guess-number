@@ -14,21 +14,18 @@ leftel.innerHTML=left
 
 function mystry(){
     my=Math.floor(Math.random()*21)
-    console.log(my)
 }
 mystry()
-console.log(my)
 
 function input(){
     let num=inp.value;
-    console.log(num)
     // if user inputs blank or 0
     if(!num || num==0) {
         alert('Please Enter Valid Number')
         return;
     }
     if(num<my){
-        console.log("too low")
+        
         let co="too low 📉"
         comel.innerHTML=co
         guess=guess+1
@@ -38,7 +35,7 @@ function input(){
         leftel.innerHTML=left
     }
     else if(num>my){
-        console.log("too big")
+        
         let co="too high 📈"
         comel.innerHTML=co
         guess=guess+1
@@ -48,7 +45,7 @@ function input(){
         leftel.innerHTML=left
     }
     else if(num==my){
-        console.log("you won 🥇")
+       
         tr()
         let co="you won🥇"
         comel.innerHTML=co
@@ -56,7 +53,7 @@ function input(){
         // guessel.innerHTML=guess
         // kel.innerHTML+=num+"-"
     }
-    console.log(score)
+  
     if(score>highscore){
         highscore=score
     }
@@ -67,5 +64,5 @@ function tr(){
     comel.innerHTML=""
     inp.value=""
     mystry()
-    console.log(my)
+    
 }
