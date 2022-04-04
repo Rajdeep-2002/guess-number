@@ -19,7 +19,6 @@ mystry()
 
 function input(){
     let num=inp.value;
-    // if user inputs blank or 0
     if(!num || num==0) {
         alert('Please Enter Valid Number')
         return;
@@ -49,9 +48,6 @@ function input(){
         tr()
         let co="you won🥇"
         comel.innerHTML=co
-        // guess=guess+1
-        // guessel.innerHTML=guess
-        // kel.innerHTML+=num+"-"
     }
   
     if(score>highscore){
@@ -63,6 +59,9 @@ function tr(){
     kel.innerHTML=""
     comel.innerHTML=""
     inp.value=""
+    left=20
+    leftel.innerHTML=left
+    guess=0
+    guessel.innerHTML=guess
     mystry()
-    
 }
